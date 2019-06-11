@@ -1,0 +1,22 @@
+public class Solution {
+
+    // Complete the findDigits function below.
+  public static void main (String[] args) {
+ Scanner in = new Scanner(System.in);
+        int loop = in.nextInt();
+        for (int i = 0; i < loop; i ++) {
+            int number = in.nextInt();
+            int copy = number;
+            int count = 0;
+            while (copy > 0) {
+                int digit = copy % 10;
+                if (digit != 0 && number % digit == 0) {
+                    count ++;
+                }
+                copy = copy / 10;
+            }
+         System.out.println (count);
+        }
+
+    }
+}
