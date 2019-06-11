@@ -1,0 +1,11 @@
+public class Solution {
+
+    // Complete the findMedian function below.
+    static int findMedian(int[] arr) {
+        int temp=0;
+Arrays.sort(arr);
+int med=(arr.length)/2;
+return arr[med];
+
+
+    }
