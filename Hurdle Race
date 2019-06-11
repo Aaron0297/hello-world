@@ -1,0 +1,22 @@
+public class Solution {
+
+    // Complete the hurdleRace function below.
+    static int hurdleRace(int k, int[] height) {
+        int largest=height[0];
+for(int i=1;i<height.length;i++)
+{
+if(height[i]>largest)
+{
+    largest=height[i];
+}
+}
+int count =largest-k;
+if(count>0)
+{
+    return count;
+}
+else
+{
+    return 0;
+}
+    }
