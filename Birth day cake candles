@@ -1,0 +1,23 @@
+public class Solution {
+
+    // Complete the birthdayCakeCandles function below.
+    static int birthdayCakeCandles(int[] ar) {
+int count=0;
+long largest=ar[0];
+
+    for(int i=0;i<ar.length;i++)
+    {
+if(ar[i]>largest)
+{
+    largest=ar[i];
+}
+    }
+    for(int j=0;j<ar.length;j++)
+    {
+        if(ar[j]==largest)
+        {
+            count++;
+        }
+    }
+    return count;
+    }
