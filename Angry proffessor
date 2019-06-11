@@ -1,0 +1,40 @@
+import java.util.*;
+
+public class AngryProfessor {
+
+ public static void main(String[] args) {
+  
+  Scanner scan = new Scanner(System.in);
+  //number of test cases
+  int T = scan.nextInt();
+  //loop for test cases
+  for(int i=0;i<T;i++)
+  {
+   int N,K; // number of students and cancellation Threshold
+   
+   N = scan.nextInt();
+   K = scan.nextInt();
+   int arr_time;
+   //loop for arrival time of N students
+   for(int j=0;j<N;j++)
+   {
+    arr_time = scan.nextInt();
+    if(arr_time<=0)
+    {
+     K = K -1;
+    }
+   }
+   if(K<=0)
+   {
+    System.out.println("NO");
+   }
+   else
+   {
+    System.out.println("YES");
+   }
+  }
+  scan.close();
+  
+ }
+
+}
