@@ -1,0 +1,34 @@
+public class Solution {
+    public static void main(String[] args) throws IOException {
+        Scanner scan=new Scanner(System.in);
+       
+        int n=scan.nextInt();
+        int a[] = new int[n];
+        for(int i=0;i<n;i++)
+        {
+         a[i]=scan.nextInt();
+        }
+       int t = 0;
+        for (int i = 0; i < n; i++) {
+            for (int j = i+1; j < n; j++) {
+                if (a[i] > a[j]) {
+                    t = a[i];
+                    a[i] = a[j];
+                    a[j] = t;
+                }
+            }
+        }
+        int result = 0;
+
+        for (int k = 0; k < n - 1; k++) {
+            if (a[k] == a[k + 1]) 
+            {
+                result = result+ 1;
+                k=k+1;
+
+            }
+
+        }
+      System.out.println(result);
+    }
+}
