@@ -3,7 +3,7 @@ public class Solution {
     // Complete the compareTriplets function below.
     static List<Integer> compareTriplets(List<Integer> a, List<Integer> b) {
         int A=0,B=0;
-for(int i=0;i<a.size()-2;i++)
+for(int i=0;i<a.size();i++)
 {
     if(a.get(i)>b.get(i))
     {
@@ -12,21 +12,7 @@ for(int i=0;i<a.size()-2;i++)
     else if(a.get(i)<b.get(i)){
         B++;
     }
-    if(a.get(i+1)>b.get(i+1))
-    {
-        A++;
-    }
-    else if(a.get(i+1)<b.get(i+1)){
-        B++;
-    }
-    if(a.get(i+2)>b.get(i+2))
-    {
-        A++;
-    }
-    else if(a.get(i+2)<b.get(i+2))
-    {
-        B++;
-    }
+   
 }
 ArrayList<Integer> c= new ArrayList<>();
     c.add(A);
